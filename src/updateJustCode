@@ -1,0 +1,6 @@
+screen -XS StrawPoll kill
+git add -A
+git commit -m "update sp"
+git pull
+git push
+screen -dmS StrawPoll waitress-serve --host 127.0.0.1 --port 5005 server:app
